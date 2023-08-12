@@ -6,7 +6,7 @@ if ($_POST['spam_check'] != '8') {
 }
 
 // Receptores
-$to = 'leonardodelboni@gmail.com', 'leonardo@leonardodelboni.com.br';
+$to = 'leonardodelboni@gmail.com';
 
 // Assunto
 $subject = $_POST['subject'];
