@@ -23,15 +23,10 @@ $headers = 'From: webmaster@example.com' . "\r\n" .
 
 // Enviar o email
 if (mail($to, $subject, $message, $headers)) {
-    echo "Mensagem enviada com sucesso!";
-} else {
-    echo "Erro ao enviar a mensagem.";
-}
-
-if ($sent) {
-    echo "Mensagem enviada com sucesso! Você será redirecionado em 5 segundos.";
+    echo "Mensagem enviada com sucesso! Você será redirecionado ao Início em 5 segundos...";
     echo '<meta http-equiv="refresh" content="5;url=index.html">';
 } else {
-    echo "Erro ao enviar a mensagem.";
+    echo "Erro ao enviar a mensagem. Retornando à página anterior em 5 segundos...";
+    echo '<meta http-equiv="refresh" content="5;url=contact.html">';
 }
 ?>
