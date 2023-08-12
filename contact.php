@@ -27,4 +27,11 @@ if (mail($to, $subject, $message, $headers)) {
 } else {
     echo "Erro ao enviar a mensagem.";
 }
+
+if ($sent) {
+    echo "Mensagem enviada com sucesso! Você será redirecionado em 5 segundos.";
+    echo '<meta http-equiv="refresh" content="5;url=index.html">';
+} else {
+    echo "Erro ao enviar a mensagem.";
+}
 ?>
