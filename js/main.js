@@ -99,3 +99,26 @@
     
 })(jQuery);
 
+
+// ADICIONADO PARA CAPUTRAR O E-MAIL DE NEWSLETTER
+
+// Encontrar o botão e o input
+var subscribeButton = document.getElementById('subscribe');
+var emailInput = document.getElementById('email');
+
+// Adicionar um evento de clique ao botão
+subscribeButton.addEventListener('click', function() {
+    // Capturar o e-mail
+    var email = emailInput.value;
+
+    // Enviar o e-mail para o servidor
+    fetch('/subscribe.php', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'email=' + email
+    })
+    .then(response => response.text())
+    .then(data => alert(data));
+});
