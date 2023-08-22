@@ -113,44 +113,37 @@
                     }
 
                     // Creating query to check the database:
-                    $query_check = "SELECT * FROM faleconosco WHERE user = '{$contact_name}' AND telephone = '{$contact_telephone}' 
-                                    AND email = '{$contact_email}' AND topic = '{$contact_subject}' AND message = '{$contact_message}'";
+                    $query_check = "SELECT * FROM faleconosco WHERE user = '{$contact_name}' AND telephone = '{$contact_telephone}' AND email = '{$contact_email}' AND topic = '{$contact_subject}' AND message = '{$contact_message}'";
 
-                    try{
-                        // Importing the necessary parameters:
-                        include("config/parameters.php");
+                    // Importing the necessary parameters:
+                    include("config/parameters.php");
 
-                        // Connecting to the database:
-                        $result = mysqli_query($conn, $query_check);
+                    // Connecting to the database:
+                    $result = mysqli_query($conn, $query_check);
 
-                        // Checking if the message was already sent:
-                        if (mysqli_num_rows($result) > 0){
-                            echo "<span style='color: red; font-weight: bold;'>Mensagem já havia sido enviada anteriormente.</span>";
-                        }
-                        else{
-                            // Creating the query to add the new row:
-                            $query_new_row = "INSERT INTO faleconosco (user, telephone, email, topic, message, ip)
-                                              VALUES ('$contact_name', '$contact_telephone', '$contact_email', '$contact_subject', '$contact_message', '$contact_ip')";
-
-                            // Inserting new message to the database:
-                            mysqli_query($conn, $query_new_row);
-
-                            // Importing the e-mail sending funtion:
-                            include("function/send_email.php");
-
-                            // Sending the e-mail:
-                            $sender_mail = $contact_email;
-                            $sender_name = $contact_name;
-                            $sender_telephone = $contact_telephone;
-                            $receiver_mail = $contact_receiver;
-
-                            // Sending the e-mail:
-                            sendEmail($sender_mail, $sender_name, $sender_telephone, $receiver_mail, $contact_subject, $contact_message, $contact_ip);
-
-                        }
+                    // Checking if the message was already sent:
+                    if (mysqli_num_rows($result) > 0){
+                        echo "<span style='color: red; font-weight: bold;'>Mensagem já havia sido enviada anteriormente.</span>";
                     }
-                    catch(mysqli_sql_exception){
-                        echo "<span style='color: red; font-weight: bold;'>Não foi possível enviar sua mensagem. Ligue para nós diretamente!</span>";
+                    else{
+                        // Creating the query to add the new row:
+                        $query_new_row = "INSERT INTO faleconosco (user, telephone, email, topic, message, ip) VALUES ('$contact_name', '$contact_telephone', '$contact_email', '$contact_subject', '$contact_message', '$contact_ip')";
+
+                        // Inserting new message to the database:
+                        mysqli_query($conn, $query_new_row);
+
+                        // Importing the e-mail sending funtion:
+                        include("function/send_email.php");
+
+                        // Sending the e-mail:
+                        $sender_mail = $contact_email;
+                        $sender_name = $contact_name;
+                        $sender_telephone = $contact_telephone;
+                        $receiver_mail = $contact_receiver;
+
+                        // Sending the e-mail:
+                        sendEmail($sender_mail, $sender_name, $sender_telephone, $receiver_mail, $contact_subject, $contact_message, $contact_ip);
+                        }
                     }
                 }
             }
@@ -158,5 +151,4 @@
         else{
             echo "<span style='color: red; font-weight: bold;'>Por favor insira o valor correto da soma e tente novamente!</span>";
         }
-    }
 ?>
