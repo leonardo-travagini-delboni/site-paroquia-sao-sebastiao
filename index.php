@@ -591,9 +591,6 @@
 </html>
 
 <?php
-    // Including the contact form:
-    include("models/contact_form.php");
-
     // Including the footer:
     include("models/footer.php");
 ?>
