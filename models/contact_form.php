@@ -136,6 +136,9 @@
                         include("functions/send_mail.php");
                         send_mail($contact_name, $contact_email, $contact_telephone, $contact_subject, $contact_message, $contact_receiver);
                         }
+                    
+                    // Closing database connection:
+                    mysqli_close($conexao);
                     }
                 }
             }
