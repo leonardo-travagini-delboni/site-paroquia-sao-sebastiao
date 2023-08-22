@@ -116,7 +116,7 @@
                     $query_check = "SELECT * FROM faleconosco WHERE user = '{$contact_name}' AND telephone = '{$contact_telephone}' AND email = '{$contact_email}' AND topic = '{$contact_subject}' AND message = '{$contact_message}'";
 
                     // Importing the necessary parameters:
-                    include("config/parameters.php");
+                    include("config/conn_db.php");
 
                     // Connecting to the database:
                     $result = mysqli_query($conn, $query_check);
@@ -143,6 +143,8 @@
 
                         // Sending the e-mail:
                         sendEmail($sender_mail, $sender_name, $sender_telephone, $receiver_mail, $contact_subject, $contact_message, $contact_ip);
+                        header("Location: success_page.php");
+                        exit;
                         }
                     }
                 }
