@@ -1,47 +1,48 @@
 <?php
 
-    function cadastrarNewsletter($email) {
-        // Inclua seu arquivo de conexão
-        include("config/conn_db.php");
+    // Declaring the newsletter subscription function:
+    function newsletter_subscription($newsletter_email){
 
-        // Verifique se o e-mail é válido
-        $new_email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        if (empty($new_email)) {
-            return "Por favor, insira um e-mail válido.";
+        // Getting the email and validating it:
+        $newsletter_email = filter_input(INPUT_POST, "newsletter_email", FILTER_VALIDATE_EMAIL);
+            
+        if (empty($newsletter_email)){
+            echo "<script>alert('Por favor, insira um e-mail válido.');</script>";
         }
+        
+        // Case it is a valid e-mail:
+        else{
+            // Connecting to the database:
+            include("config/conn_db.php");
 
-        // Verifique se o e-mail já está cadastrado
-        $query_check_newsletter = "SELECT * FROM newsletter WHERE email = ?";
-        $stmt = mysqli_prepare($conn, $query_check_newsletter);
-        mysqli_stmt_bind_param($stmt, 's', $new_email);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
+            // Checking if the e-mail is already applied:
+            $query_check_newsletter = "SELECT * FROM newsletter WHERE email = ?";
+            $stmt = mysqli_prepare($conn, $query_check_newsletter);
+            mysqli_stmt_bind_param($stmt, 's', $newsletter_email);
+            mysqli_stmt_execute($stmt);
+            $result = mysqli_stmt_get_result($stmt);
 
-        if (mysqli_num_rows($result) > 0) {
-            return "<span style='color: red; font-weight: bold;'>E-mail já cadastrado na base.</span>";
-        }
+            // In case of duplicates:
+            if (mysqli_num_rows($result) > 0) {
+                echo "<script>alert(\"E-mail já cadastrado na base.\");</script>";
+            }
+            // Adding new e-mail:
+            else {
+                $query_new_row_newsletter = "INSERT INTO newsletter (email) VALUES (?)";
+                $stmt = mysqli_prepare($conn, $query_new_row_newsletter);
+                mysqli_stmt_bind_param($stmt, 's', $newsletter_email);
+                $success = mysqli_stmt_execute($stmt);
 
-        // Insira o novo e-mail
-        $query_new_row_newsletter = "INSERT INTO newsletter (email) VALUES (?)";
-        $stmt = mysqli_prepare($conn, $query_new_row_newsletter);
-        mysqli_stmt_bind_param($stmt, 's', $new_email);
-        $success = mysqli_stmt_execute($stmt);
+                // Closing connection with the database:
+                mysqli_close($conn);
 
-        // Feche a conexão
-        mysqli_close($conn);
-
-        if ($success) {
-            return "E-mail cadastrado com sucesso!";
-        } else {
-            return "Houve um erro ao cadastrar o e-mail.";
+                // Final message to the user:
+                if ($success) {
+                    echo "<script>alert('E-mail cadastrado com sucesso!');</script>";
+                } else {
+                    echo "<script>alert('Houve um erro ao cadastrar o e-mail.');</script>";
+                }
+            }
         }
     }
-
-    // Se a requisição POST foi enviada, chame a função
-    if (!empty($_POST["subscribe"])) {
-        $email_subscribe = $_POST["email"];
-        $message_subscribe = cadastrarNewsletter($email_subscribe);
-        echo $message_subscribe;
-    }
-
 ?>

@@ -91,6 +91,11 @@ if (isset($_POST["subscribe"])){
     // Checking if something is written inside the box:
     if(!empty($_POST["newsletter_email"])){
 
+        // Importing the newsletter subscription function:
+        include("functions/newsletter.php");
+        newsletter_subscription($_POST["newsletter_email"]);
+
+        /*
         // Getting the email and validating it:
         $newsletter_email = filter_input(INPUT_POST, "newsletter_email", FILTER_VALIDATE_EMAIL);
         
@@ -130,7 +135,9 @@ if (isset($_POST["subscribe"])){
                     echo "<script>alert('Houve um erro ao cadastrar o e-mail.');</script>";
                 }
             }
+
         }
+    */
     }
 }
 ?>
