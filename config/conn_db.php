@@ -6,7 +6,4 @@
     if (!$conn) {
         die("Conexão falhou: " . mysqli_connect_error());
     }
-    else{
-        echo "<br>Connection OK!";
-    }
 ?>

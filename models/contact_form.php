@@ -131,20 +131,16 @@
 
                         // Inserting new message to the database:
                         mysqli_query($conn, $query_new_row);
+                        // ATÉ AQUI ESTÁ FUNCIONANDO ----
 
                         // Importing the e-mail sending funtion:
                         include("function/send_email.php");
 
                         // Sending the e-mail:
-                        $sender_mail = $contact_email;
-                        $sender_name = $contact_name;
-                        $sender_telephone = $contact_telephone;
-                        $receiver_mail = $contact_receiver;
-
-                        // Sending the e-mail:
-                        sendEmail($sender_mail, $sender_name, $sender_telephone, $receiver_mail, $contact_subject, $contact_message, $contact_ip);
-                        header("Location: success_page.php");
-                        exit;
+                        sendEmail($contact_name, $contact_email, $contact_telephone, $contact_receiver, $contact_subject, $contact_message, $contact_ip);
+                        $redirect_url = htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "UTF-8");
+                        header("Location: $redirect_url");
+                        //exit;
                         }
                     }
                 }
