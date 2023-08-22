@@ -4,6 +4,15 @@
 
     // Including the header:
     include("models/header.php");
+
+    // Including the opening carousel:
+    include("models/opening.php");
+
+    // Including the churches:
+    include("models/churches.php");
+
+    // Including the associations:
+    include("models/associations.php");
 ?>
 
 <!DOCTYPE html>
@@ -11,108 +20,6 @@
 <head>
 </head>
 <body>
-    <!-- Carousel Start -->
-    <div class="container-fluid p-0 pb-5">
-        <div class="owl-carousel header-carousel position-relative">
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-1.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Bem-vindo a</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">PARÓQUIA SÃO SEBASTIÃO</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">"Mas colocai em primeiro lugar o Reino de Deus e a sua justiça, e tudo lhe será dado em acréscimo" (Mt 6,33)</p>
-                                <a href="horarios.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Nossos Horários</a>
-                                <a href="contact.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Fale Conosco</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-2.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Bem-vindo a</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">PARÓQUIA SÃO SEBASTIÃO</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">"Vinde a mim, todos os que estais cansados e oprimidos, e eu vos aliviarei." (Mt 11,28)</p>
-                                <a href="horarios.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Nossos Horários</a>
-                                <a href="contact.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Fale Conosco</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="owl-carousel-item position-relative">
-                <img class="img-fluid" src="img/carousel-3.jpg" alt="">
-                <div class="position-absolute top-0 start-0 w-100 h-100 d-flex align-items-center" style="background: rgba(53, 53, 53, .7);">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-lg-8 text-center">
-                                <h5 class="text-white text-uppercase mb-3 animated slideInDown">Bem-vindo a</h5>
-                                <h1 class="display-3 text-white animated slideInDown mb-4">PARÓQUIA SÃO SEBASTIÃO</h1>
-                                <p class="fs-5 fw-medium text-white mb-4 pb-2">"O Deus de esperança vos encha de toda a alegria e paz na vossa fé." (Romanos 15,13)</p>
-                                <a href="horarios.html" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Nossos Horários</a>
-                                <a href="contact.html" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Fale Conosco</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Carousel End -->
-
-    <!-- Feature Start -->
-    <div class="container-xxl py-5">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.1s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-user-check fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">01</h1>
-                    </div>
-                    <h5>Creative Designers</h5>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.3s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-check fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">02</h1>
-                    </div>
-                    <h5>Quality Products</h5>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.5s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-drafting-compass fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">03</h1>
-                    </div>
-                    <h5>Free Consultation</h5>
-                </div>
-                <div class="col-md-6 col-lg-3 wow fadeIn" data-wow-delay="0.7s">
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="d-flex align-items-center justify-content-center bg-light" style="width: 60px; height: 60px;">
-                            <i class="fa fa-headphones fa-2x text-primary"></i>
-                        </div>
-                        <h1 class="display-1 text-light mb-0">04</h1>
-                    </div>
-                    <h5>Customer Support</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Feature Start -->
-
-
-
     <!-- About Start -->
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
         <div class="container about px-lg-0">
@@ -476,41 +383,6 @@
     </div>
     <!-- Quote End -->
 
-    <!-- Testimonial Start -->
-    <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <div class="container">
-            <div class="section-title text-center">
-                <h1 class="display-5 mb-5">Testimonial</h1>
-            </div>
-            <div class="owl-carousel testimonial-carousel">
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-1.jpg" style="width: 90px; height: 90px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-2.jpg" style="width: 90px; height: 90px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-                <div class="testimonial-item text-center">
-                    <img class="img-fluid bg-light p-2 mx-auto mb-3" src="img/testimonial-3.jpg" style="width: 90px; height: 90px;">
-                    <div class="testimonial-text text-center p-4">
-                        <p>Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum justo sea clita.</p>
-                        <h5 class="mb-1">Client Name</h5>
-                        <span class="fst-italic">Profession</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Testimonial End -->
 
     <!-- Team Start -->
     <div class="container-xxl py-5">
@@ -592,6 +464,7 @@
 
 <?php
     // Including the central body:
+
     include("models/contact_form.php");
 ?>
 

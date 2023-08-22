@@ -91,15 +91,13 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">INÍCIO</a>
-                <a href="sobre.html" class="nav-item nav-link">SOBRE</a>
-                <a href="horarios.html" class="nav-item nav-link">HORÁRIOS</a>
+                <a href="sobre.php" class="nav-item nav-link">SOBRE</a>
+                <a href="horarios.php" class="nav-item nav-link">HORÁRIOS</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">OUTROS</a>
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">OUTROS</a>
                     <div class="dropdown-menu fade-up m-0">
                         <a href="igrejas.php" class="dropdown-item">Igrejas</a>
                         <a href="pastorais.php" class="dropdown-item">Pastorais</a>
-                        <a href="sacerdotes.php" class="dropdown-item">Sacerdotes</a>
-                        <a href="diocese.php" class="dropdown-item">Diocese</a>
                     </div>
                 </div>
                 <a href="contato.php" class="nav-item nav-link">CONTATO</a>
