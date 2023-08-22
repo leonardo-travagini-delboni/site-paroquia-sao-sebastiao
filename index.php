@@ -591,6 +591,11 @@
 </html>
 
 <?php
+    // Including the central body:
+    include("models/contact_form.php");
+?>
+
+<?php
     // Including the footer:
     include("models/footer.php");
 ?>
