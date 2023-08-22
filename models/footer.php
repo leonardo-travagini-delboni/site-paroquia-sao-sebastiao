@@ -38,14 +38,14 @@
                     <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Newsletter</h4>
+                    <h4 class="text-light mb-4">Assine nossa Newsletter</h4>
                     <p>Fique por dentro das novidades</p>
-                    <form action="footer.php" method="post">
-                        <div class="position-relative mx-auto" style="max-width: 400px;">
-                            <input id="email" name="email" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Insira seu e-mail">
-                            <button id="subscribe" name="subscribe" type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Cadastrar</button>
-                        </div>
-                    </form>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
+                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Insira seu e-mail" name="newsletter_email">
+                            <input type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" name="subscribe" value="Cadastrar">
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -81,54 +81,23 @@
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
 
 <?php
 
-    function cadastrarNewsletter($email) {
-        // Inclua seu arquivo de conexão
-        include("config/conn_db.php");
+    // Checking the newsletter aplication is active:
+    if (isset($_POST["subscribe"])){
+        echo "Botão apertado!";                             //  EXCLUDE LINE
 
-        // Verifique se o e-mail é válido
-        $new_email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        if (empty($new_email)) {
-            return "Por favor, insira um e-mail válido.";
+        $newsletter_email = filter_input(INPUT_POST, "newsletter_email", FILTER_VALIDATE_EMAIL);
+        
+        if (empty($newsletter_email)){
+            echo "Por favor, insira um e-mail válido.";
         }
 
-        // Verifique se o e-mail já está cadastrado
-        $query_check_newsletter = "SELECT * FROM newsletter WHERE email = ?";
-        $stmt = mysqli_prepare($conn, $query_check_newsletter);
-        mysqli_stmt_bind_param($stmt, 's', $new_email);
-        mysqli_stmt_execute($stmt);
-        $result = mysqli_stmt_get_result($stmt);
-
-        if (mysqli_num_rows($result) > 0) {
-            return "<span style='color: red; font-weight: bold;'>E-mail já cadastrado na base.</span>";
+        else{
+            echo "Email válido inserido: {$newsletter_email}";                             //  EXCLUDE LINE
         }
-
-        // Insira o novo e-mail
-        $query_new_row_newsletter = "INSERT INTO newsletter (email) VALUES (?)";
-        $stmt = mysqli_prepare($conn, $query_new_row_newsletter);
-        mysqli_stmt_bind_param($stmt, 's', $new_email);
-        $success = mysqli_stmt_execute($stmt);
-
-        // Feche a conexão
-        mysqli_close($conn);
-
-        if ($success) {
-            return "E-mail cadastrado com sucesso!";
-        } else {
-            return "Houve um erro ao cadastrar o e-mail.";
-        }
+    
     }
-
-    // Se a requisição POST foi enviada, chame a função
-    if (!empty($_POST["subscribe"])) {
-        $email = $_POST["email"];
-        $message = cadastrarNewsletter($email);
-        echo $message;
-    }
-
 ?>
-
