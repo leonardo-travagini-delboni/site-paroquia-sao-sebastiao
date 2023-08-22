@@ -6,5 +6,5 @@
     $db_name= "u826974739_saosebastiao";
 
     // Global repo parameters:
-    $contact_receiver = "contato@saosebastiaoparoquia.com.br";
+    $contact_receiver = "leonardodelboni@gmail.com";
 ?>

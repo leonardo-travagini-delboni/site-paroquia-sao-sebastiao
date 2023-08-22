@@ -144,7 +144,7 @@
                         $headers = "From: $contact_name <$contact_email>";
                 
                         // Enviar e-mail:
-                        include("parameters.php");
+                        require 'config/parameters.php';
                         if (mail($contact_receiver, $contact_subject, $email_content, $headers)) {
                             header("Location: " . $_SERVER['PHP_SELF']);
                         } 
