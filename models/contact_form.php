@@ -131,23 +131,15 @@
 
                         // Inserting new message to the database:
                         mysqli_query($conn, $query_new_row);
-                        // ATÉ AQUI ESTÁ FUNCIONANDO ----
+                        // ATÉ AQUI ESTÁ FUNCIONANDO
 
                         // Importing the e-mail sending funtion:
                         include("functions/send_email.php");
 
                         // Sending the e-mail:
-                        $statusEmail = sendEmail($contact_name, $contact_email, $contact_telephone, $contact_receiver, $contact_subject, $contact_message, $contact_ip);
-                        if($statusEmail){
-                            echo "<span style='color: green; font-weight: bold;'>Mensagem enviada com sucesso! Redirecionando você em 5 segundos...</span>";
-                            echo '<meta http-equiv="refresh" content="5;url=index.html">';
-                            $redirect_url = htmlspecialchars($_SERVER["PHP_SELF"], ENT_QUOTES, "UTF-8");
-                            header("Location: $redirect_url");
-                            }
-                        else{
-                            echo "<span style='color: red; font-weight: bold;'>Erro ao enviar a mensagem. Retornando à página anterior em 5 segundos...</span>";
-                            echo '<meta http-equiv="refresh" content="5;url=contact.html">';
-                            }
+                        sendEmail($contact_name, $contact_email, $contact_telephone, $contact_receiver, $contact_subject, $contact_message, $contact_ip);
+                        header("Location: contato.php");
+                        exit;
                         }
                     }
                 }
