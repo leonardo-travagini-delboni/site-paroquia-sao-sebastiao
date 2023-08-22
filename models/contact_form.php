@@ -92,7 +92,7 @@
             $contact_ip = htmlspecialchars($_SERVER['REMOTE_ADDR']);
 
             // Checking incorret provided values:
-            if (empty($contact_email) && empty($contact_email)){
+            if (empty($contact_email) || empty($contact_email)){
                 echo "<span style='color: red; font-weight: bold;'>Por favor, insira pelo menos o telefone ou o e-mail e então clique em Enviar!</span>";
             }
             else{
@@ -129,7 +129,7 @@
                         }
                         else{
                             // Creating the query to add the new row:
-                            $query_new_row = "INSERT INTO faleconosco WHERE (user, telephone, email, topic, message, ip)
+                            $query_new_row = "INSERT INTO faleconosco (user, telephone, email, topic, message, ip)
                                               VALUES ('$contact_name', '$contact_telephone', '$contact_email', '$contact_subject', '$contact_message', '$contact_ip'";
 
                             try{
