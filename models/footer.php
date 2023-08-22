@@ -35,7 +35,7 @@
                     <a class="btn btn-link" href="https://www.facebook.com/saosebastiao.matriz" target="_blank">Nosso Facebook</a>
                     <a class="btn btn-link" href="https://www.instagram.com/sao.sebastiao.paroquia/" target="_blank">Nosso Instagram</a>
                     <a class="btn btn-link" href="https://www.youtube.com/channel/UCCdnVASNbY3O1Femu7BS-TQ" target="_blank">Nosso Youtube</a>
-                    <a class="btn btn-link" href="mailto:contato@saosebastiaoparoquia.com.br" target="_blank">Nosso Correio Eletrônico</a>
+                    <a class="btn btn-link" href="mailto:contato@saosebastiaoparoquia.com.br" target="_blank">Nosso E-mail Principal</a>
                     <a class="btn btn-link" href="https://api.whatsapp.com/send/?phone=5511994421880" target="_blank">Suporte Técnico & TI</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
