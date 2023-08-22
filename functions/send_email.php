@@ -1,5 +1,4 @@
 <?php
-
     function sendEmail($contact_name, $contact_email, $contact_telephone, $contact_receiver, $contact_subject, $contact_message, $contact_ip) {
         
         // Pega a hora corrente
@@ -20,11 +19,9 @@
 
         // Envia o email
         if(mail($contact_receiver, $contact_subject, $message, $headers)) {
-            echo "<span style='color: green; font-weight: bold;'>Mensagem enviada com sucesso! Você será redirecionado a HOMEPAGE em 5 segundos...</span>";
-            echo '<meta http-equiv="refresh" content="5;url=index.html">';
+            return true;
         } else {
-            echo "<span style='color: red; font-weight: bold;'>Erro ao enviar a mensagem. Retornando à página anterior em 5 segundos...</span>";
-            echo '<meta http-equiv="refresh" content="5;url=contact.html">';
+            return false;
         }
     }
 ?>
