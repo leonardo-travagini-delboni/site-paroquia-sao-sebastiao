@@ -130,7 +130,7 @@
                         else{
                             // Creating the query to add the new row:
                             $query_new_row = "INSERT INTO faleconosco (user, telephone, email, topic, message, ip)
-                                              VALUES ('$contact_name', '$contact_telephone', '$contact_email', '$contact_subject', '$contact_message', '$contact_ip'";
+                                              VALUES ('$contact_name', '$contact_telephone', '$contact_email', '$contact_subject', '$contact_message', '$contact_ip')";
 
                             try{
                                 // Inserting new message to the database:
@@ -164,4 +164,7 @@
             echo "<span style='color: red; font-weight: bold;'>Por favor insira o valor correto da soma e tente novamente!</span>";
         }
     }
+
+    // Closing the database connection:
+    mysqli_close($conn);
 ?>
