@@ -82,3 +82,9 @@
 
 </html>
 
+<?php
+
+    // Importing the newsletter funtion:
+    include("functions/newsletter.php");
+?>
+

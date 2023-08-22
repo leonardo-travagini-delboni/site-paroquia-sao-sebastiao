@@ -138,7 +138,7 @@
                         }
                     
                     // Closing database connection:
-                    mysqli_close($conexao);
+                    mysqli_close($conn);
                     }
                 }
             }
