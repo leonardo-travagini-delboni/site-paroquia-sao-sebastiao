@@ -139,8 +139,14 @@
                                 // Importing the e-mail sending funtion:
                                 include("function/send_email.php");
 
-                                // Sending the e-mail accordingly:
-                                sendEmail($contact_email, $contact_name, $contact_telephone, $contact_receiver, $contact_subject, $contact_message, $contact_ip);
+                                // Sending the e-mail:
+                                $sender_mail = $contact_email;
+                                $sender_name = $contact_name;
+                                $sender_telephone = $contact_telephone;
+                                $receiver_mail = $contact_receiver;
+
+                                // Sending the e-mail:
+                                sendEmail($sender_mail, $sender_name, $sender_telephone, $receiver_mail, $contact_subject, $contact_message, $contact_ip);
 
                             }
                             catch(mysqli_sql_exception){
