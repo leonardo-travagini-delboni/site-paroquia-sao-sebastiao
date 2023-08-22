@@ -16,9 +16,12 @@
         require 'config/parameters.php';
         if (mail($contact_receiver, $contact_subject, $email_content, $headers)) {
             header("Location: " . $_SERVER['PHP_SELF']);
+            echo "Mensagem enviada com sucesso.";
+            return true;
         } 
         else {
             echo "Ocorreu um erro ao enviar o e-mail.";
+            return false;
         }
 
     }
