@@ -32,7 +32,9 @@
 <?php
     // Including the contact form:
     include("models/contact_form.php");
+?>
 
+<?php
     // Including the footer:
     include("models/footer.php");
 ?>
