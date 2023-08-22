@@ -43,7 +43,7 @@
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
                             <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Insira seu e-mail" name="newsletter_email">
-                            <input type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" name="subscribe" value="Cadastrar">
+                            <input type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" name="subscribe" value="Cadastrar">
                         </form>
                     </div>
                 </div>
