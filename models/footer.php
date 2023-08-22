@@ -84,44 +84,40 @@
 
 <?php
 
-    // Checking if POST is active:
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    // Checking if the Newsletter button is active:
+        if (!empty($_POST["subscribe"])){
 
-        // Checking if the Newsletter button is active:
-            if (!empty($_POST["subscribe"])){
+            // Checking if a valid e-mail is provided:
+            $new_email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
+            if (!empty($new_email)){
 
-                // Checking if a valid e-mail is provided:
-                $new_email = filter_input(INPUT_POST, "email", FILTER_VALIDATE_EMAIL);
-                if (!empty($new_email)){
+                // Creating query to check the database:
+                $query_check_newsletter = "SELECT * FROM newsletter WHERE email = '$new_email'";
 
-                    // Creating query to check the database:
-                    $query_check_newsletter = "SELECT * FROM newsletter WHERE email = '$new_email'";
+                // Creating connection with the database:
+                include("config/conn_db.php");
 
-                    // Creating connection with the database:
-                    include("config/conn_db.php");
+                // Connecting to the database:
+                $result_email_newsletter = mysqli_query($conn, $query_check_newsletter);
 
-                    // Connecting to the database:
-                    $result_email_newsletter = mysqli_query($conn, $query_check_newsletter);
-
-                    // Checking if the message was already sent:
-                    if (mysqli_num_rows($result_email_newsletter) > 0){
-                        echo "<span style='color: red; font-weight: bold;'>E-mail já cadastrado na base.</span>";
-                    }
-                    else{
-
-                        // Creating the query to add the new row:
-                        $query_new_row_newsletter = "INSERT INTO newsletter (email) VALUES ('$new_email')";
-
-                        // Inserting new message to the database:
-                        mysqli_query($conn, $query_new_row_newsletter);
-
-                        echo "E-mail cadastrado com sucesso!";
-                    }
-
-                    // Closing database connection:
-                    mysqli_close($conn);
+                // Checking if the message was already sent:
+                if (mysqli_num_rows($result_email_newsletter) > 0){
+                    echo "<span style='color: red; font-weight: bold;'>E-mail já cadastrado na base.</span>";
                 }
+                else{
+
+                    // Creating the query to add the new row:
+                    $query_new_row_newsletter = "INSERT INTO newsletter (email) VALUES ('$new_email')";
+
+                    // Inserting new message to the database:
+                    mysqli_query($conn, $query_new_row_newsletter);
+
+                    echo "E-mail cadastrado com sucesso!";
+                }
+
+                // Closing database connection:
+                mysqli_close($conn);
             }
-    }
+        }
 ?>
 
