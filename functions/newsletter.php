@@ -41,7 +41,7 @@
 
             }
             else{
-                echo "Por favor insira um e-mail válido."
+                echo "Por favor insira um e-mail válido.";
             }
         }
     }
