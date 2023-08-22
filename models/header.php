@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Paróquia São Sebastião</title>
+    <!-- Naming in each specific webpage -->
+    <title><?php echo $pageTitle; ?></title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -37,6 +38,7 @@
 </head>
 
 <body>
+    
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">
@@ -50,7 +52,6 @@
     <div class="container-fluid bg-light p-0">
         <div class="row gx-0 d-none d-lg-flex">
             <div class="col-lg-7 px-5 text-start">
-                <!-- Adicionando o título no cabeçalho-->
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <h6 class="m-0 text-primary">Paróquia São Sebastião</h6>
                 </div>
@@ -71,14 +72,13 @@
                 <div class="h-100 d-inline-flex align-items-center">
                     <a class="btn btn-sm-square bg-white text-primary me-1 d-none d-md-inline-block" href="https://api.whatsapp.com/send/?phone=5517997479104" target="_blank"><i class="fab fa-whatsapp"></i></a>
                     <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/saosebastiao.matriz" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1" href="" target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-sm-square bg-white text-primary me-1 d-none d-md-inline-block" href="" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.instagram.com/sao.sebastiao.paroquia/" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1 d-none d-md-inline-block" href="https://www.youtube.com/channel/UCCdnVASNbY3O1Femu7BS-TQ" target="_blank"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
         </div>
     </div>
     <!-- Topbar End -->
-
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0">
@@ -90,7 +90,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
-                <a href="index.html" class="nav-item nav-link active">INÍCIO</a>
+                <a href="index.html" class="nav-item nav-link">INÍCIO</a>
                 <a href="about.html" class="nav-item nav-link">SOBRE</a>
                 <a href="horarios.html" class="nav-item nav-link">HORÁRIOS</a>
                 <a href="project.html" class="nav-item nav-link">PROJETOS</a>
@@ -111,20 +111,6 @@
         </div>
     </nav>
     <!-- Navbar End -->
-
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 
     </body>
 </html>
