@@ -91,23 +91,20 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto p-4 p-lg-0">
                 <a href="index.php" class="nav-item nav-link">INÍCIO</a>
-                <a href="about.html" class="nav-item nav-link">SOBRE</a>
+                <a href="sobre.html" class="nav-item nav-link">SOBRE</a>
                 <a href="horarios.html" class="nav-item nav-link">HORÁRIOS</a>
-                <a href="project.html" class="nav-item nav-link">PROJETOS</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">OUTROS</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="feature.html" class="dropdown-item">Faça doação</a>
-                        <a href="quote.html" class="dropdown-item">Bíblia Online</a>
-                        <a href="team.html" class="dropdown-item">Nossa Equipe</a>
-                        <a href="testimonial.html" class="dropdown-item">Testemunhos</a>
-                        <a href="developer.html" class="dropdown-item">Desenvolvedor</a>
-                        <a href="404.html" class="dropdown-item">Erro 404</a>
+                        <a href="igrejas.php" class="dropdown-item">Igrejas</a>
+                        <a href="pastorais.php" class="dropdown-item">Pastorais</a>
+                        <a href="sacerdotes.php" class="dropdown-item">Sacerdotes</a>
+                        <a href="diocese.php" class="dropdown-item">Diocese</a>
                     </div>
                 </div>
                 <a href="contato.php" class="nav-item nav-link">CONTATO</a>
             </div>
-            <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">MISSA ONLINE<i class="fa fa-arrow-right ms-3"></i></a>
+            <a href="contribua.php" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">CONTRIBUA<i class="fa fa-arrow-right ms-3"></i></a>
         </div>
     </nav>
     <!-- Navbar End -->

@@ -10,7 +10,7 @@
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Entre em Contato</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Rua São Sebastião, 335, Baumann <br>Novo Horizonte - SP, CEP 14967-264</p>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Rua São Sebastião, 335 <br>Vila Baumann<br>Novo Horizonte - SP<br>CEP 14967-264</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(17) 3543-1654</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(17) 99747-9104</p>
                     <p class="mb-2"><i class="fa fa-envelope me-3"></i>contato@saosebastiaoparoquia.com.br</p>
@@ -22,15 +22,16 @@
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Pastorais</h4>
-                    <a class="btn btn-link" href="">General Carpentry</a>
-                    <a class="btn btn-link" href="">Furniture Remodeling</a>
-                    <a class="btn btn-link" href="">Wooden Floor</a>
-                    <a class="btn btn-link" href="">Wooden Furniture</a>
-                    <a class="btn btn-link" href="">Custom Carpentry</a>
+                    <h4 class="text-light mb-4">São Sebastião</h4>
+                    <a class="btn btn-link" href="index.php">Início</a>
+                    <a class="btn btn-link" href="sobre.php">Sobre</a>
+                    <a class="btn btn-link" href="horarios.php">Horários</a>
+                    <a class="btn btn-link" href="pastorais.php">Pastorais</a>
+                    <a class="btn btn-link" href="capelas.php">Capelas</a>
+                    <a class="btn btn-link" href="contato.php">Contato</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Seções</h4>
+                    <h4 class="text-light mb-4">Pastorais</h4>
                     <a class="btn btn-link" href="">About Us</a>
                     <a class="btn btn-link" href="">Contact Us</a>
                     <a class="btn btn-link" href="">Our Services</a>
@@ -38,11 +39,11 @@
                     <a class="btn btn-link" href="">Support</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h4 class="text-light mb-4">Assine nossa Newsletter</h4>
+                    <h4 class="text-light mb-4">Newsletter</h4>
                     <p>Fique por dentro das novidades</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
                         <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
-                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Insira seu e-mail" name="newsletter_email">
+                            <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Seu e-mail" name="newsletter_email">
                             <input type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2" name="subscribe" value="Cadastrar">
                         </form>
                     </div>
@@ -84,17 +85,15 @@
 </html>
 
 <?php
+    // Checking the newsletter application is active:
+    if (isset($_POST["subscribe"])){
 
-// Checking the newsletter application is active:
-if (isset($_POST["subscribe"])){
+        // Checking if something is written inside the box:
+        if(!empty($_POST["newsletter_email"])){
 
-    // Checking if something is written inside the box:
-    if(!empty($_POST["newsletter_email"])){
-
-        // Importing the newsletter subscription function:
-        include("functions/newsletter.php");
-        newsletter_subscription($_POST["newsletter_email"]);
-        
+            // Importing the newsletter subscription function:
+            include("functions/newsletter.php");
+            newsletter_subscription($_POST["newsletter_email"]);
+        }
     }
-}
 ?>
