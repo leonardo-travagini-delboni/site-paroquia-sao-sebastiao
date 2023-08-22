@@ -13,7 +13,7 @@
                     <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>Rua São Sebastião, 335, Baumann <br>Novo Horizonte - SP, CEP 14967-264</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(17) 3543-1654</p>
                     <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>(17) 99747-9104</p>
-                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>sb@saosebastiaoparoquia.com.br</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>contato@saosebastiaoparoquia.com.br</p>
                     <div class="d-flex pt-2">
                         <a class="btn btn-outline-light btn-social" href="https://api.whatsapp.com/send/?phone=5517997479104" target="_blank"><i class="fab fa-whatsapp"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/saosebastiao.matriz" target="_blank"><i class="fab fa-facebook-f"></i></a>
@@ -41,8 +41,8 @@
                     <h4 class="text-light mb-4">Assine nossa Newsletter</h4>
                     <p>Fique por dentro das novidades</p>
                     <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input id="email" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Insira seu e-mail">
-                        <button id="subscribe" type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Cadastrar</button>
+                        <input id="email" name="email" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Insira seu e-mail">
+                        <button id="subscribe" name="subscribe" type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Cadastrar</button>
                     </div>
                 </div>
             </div>
@@ -83,8 +83,8 @@
 </html>
 
 <?php
-
     // Importing the newsletter funtion:
     include("functions/newsletter.php");
+    newsletter();
 ?>
 
