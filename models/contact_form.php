@@ -143,22 +143,20 @@
                         // Cabeçalho do e-mail
                         $headers = "From: $contact_name <$contact_email>";
                 
-                        // Enviar e-mail
-                        $contact_receiver = "leonardodelboni@gmail.com"; // ---------------------------------------------------------------------->>>>>>
+                        // Enviar e-mail:
+                        include("parameters.php");
                         if (mail($contact_receiver, $contact_subject, $email_content, $headers)) {
                             header("Location: " . $_SERVER['PHP_SELF']);
-                            exit;
                         } 
                         else {
                             echo "Ocorreu um erro ao enviar o e-mail.";
                         }
-
                         }
                     }
                 }
             }
         }
         else{
-            echo "<span style='color: red; font-weight: bold;'>Por favor insira o valor correto da soma e tente novamente!</span>";
+            echo "<span style='font-weight: bold;'>Por favor insira o valor correto da soma e tente novamente!</span>";
         }
 ?>
