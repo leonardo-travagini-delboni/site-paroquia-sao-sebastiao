@@ -30,8 +30,10 @@
 </html>
 
 <?php
+    /*
     // Including the contact form:
     include("models/contact_form.php");
+    */
 ?>
 
 <?php
