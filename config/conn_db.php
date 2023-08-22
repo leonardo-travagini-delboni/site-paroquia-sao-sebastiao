@@ -1,14 +1,12 @@
 <?php
     // Importing the necessary parameters:
-    include("config/parameters.php");
+    include("parameters.php");
 
-    // Exception handling (avoiding to display huge messages to the user):
-    try{
-        //Conecting to the SQL database:
-        $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+    $conn = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
+    if (!$conn) {
+        die("Conexão falhou: " . mysqli_connect_error());
     }
-    // In case of error:
-    catch(mysqli_sql_exception){
-        echo "<br>INTERNAL ERROR: Connection with the database has failed!"; 
+    else{
+        echo "<br>Connection OK!";
     }
 ?>
