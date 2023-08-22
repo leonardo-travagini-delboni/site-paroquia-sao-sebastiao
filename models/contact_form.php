@@ -140,7 +140,7 @@
                 }
             }
         }
-        else{
+        elseif (!empty($contact_spam_check)){
             echo "<span style='font-weight: bold;'>Por favor insira o valor correto da soma e tente novamente!</span>";
         }
 ?>
