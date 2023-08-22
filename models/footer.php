@@ -107,7 +107,7 @@
             // Checking if the e-mail is already applied:
             $query_check_newsletter = "SELECT * FROM newsletter WHERE email = ?";
             $stmt = mysqli_prepare($conn, $query_check_newsletter);
-            mysqli_stmt_bind_param($stmt, 's', $new_email);
+            mysqli_stmt_bind_param($stmt, 's', $newsletter_email);
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
 
@@ -123,7 +123,7 @@
             // Adding new e-mail:
             $query_new_row_newsletter = "INSERT INTO newsletter (email) VALUES (?)";
             $stmt = mysqli_prepare($conn, $query_new_row_newsletter);
-            mysqli_stmt_bind_param($stmt, 's', $new_email);
+            mysqli_stmt_bind_param($stmt, 's', $newsletter_email);
             $success = mysqli_stmt_execute($stmt);
 
             echo "<br>STEP 4";                                                              //  EXCLUDE LINE
