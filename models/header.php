@@ -105,7 +105,7 @@
                         <a href="404.html" class="dropdown-item">Erro 404</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">CONTATO</a>
+                <a href="contato.php" class="nav-item nav-link">CONTATO</a>
             </div>
             <a href="" class="btn btn-primary py-4 px-lg-5 d-none d-lg-block">MISSA ONLINE<i class="fa fa-arrow-right ms-3"></i></a>
         </div>

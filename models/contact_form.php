@@ -115,7 +115,7 @@
                     // Creating query to check the database:
                     $query_check = "SELECT * FROM faleconosco WHERE user = '{$contact_name}' AND telephone = '{$contact_telephone}' AND email = '{$contact_email}' AND topic = '{$contact_subject}' AND message = '{$contact_message}'";
 
-                    // Importing the necessary parameters:
+                    // Importing the database connection:
                     include("config/conn_db.php");
 
                     // Connecting to the database:
@@ -131,8 +131,15 @@
 
                         // Inserting new message to the database:
                         mysqli_query($conn, $query_new_row);
-                        // ATÉ AQUI ESTÁ FUNCIONANDO
 
+                        // Importing the global receiver mail:
+                        include("config/parameters.php");
+
+                        // Importing the mail sending functions:
+                        include("functions/send_mail.php");
+                        send_mail($contact_name, $contact_email, $contact_telephone, $contact_subject, $contact_message, $contact_receiver);
+                        
+                        /*
                         // Conteúdo do e-mail
                         $email_content = null;
                         $email_content = "Nome: $contact_name\n";
@@ -151,6 +158,8 @@
                         else {
                             echo "Ocorreu um erro ao enviar o e-mail.";
                         }
+                        */
+
                         }
                     }
                 }
