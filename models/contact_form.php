@@ -134,7 +134,7 @@
                         // ATÉ AQUI ESTÁ FUNCIONANDO ----
 
                         // Importing the e-mail sending funtion:
-                        include("function/send_email.php");
+                        include("functions/send_email.php");
 
                         // Sending the e-mail:
                         $statusEmail = sendEmail($contact_name, $contact_email, $contact_telephone, $contact_receiver, $contact_subject, $contact_message, $contact_ip);
