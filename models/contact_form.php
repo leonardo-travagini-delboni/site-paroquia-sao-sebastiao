@@ -138,8 +138,6 @@
 
                         // Sending the e-mail:
                         sendEmail($contact_name, $contact_email, $contact_telephone, $contact_receiver, $contact_subject, $contact_message, $contact_ip);
-                        header("Location: contato.php");
-                        exit;
                         }
                     }
                 }
