@@ -40,10 +40,12 @@
                 <div class="col-lg-3 col-md-6">
                     <h4 class="text-light mb-4">Assine nossa Newsletter</h4>
                     <p>Fique por dentro das novidades</p>
-                    <div class="position-relative mx-auto" style="max-width: 400px;">
-                        <input id="email" name="email" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Insira seu e-mail">
-                        <button id="subscribe" name="subscribe" type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Cadastrar</button>
-                    </div>
+                    <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input id="email" name="email" class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Insira seu e-mail">
+                            <button id="subscribe" name="subscribe" type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Cadastrar</button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
