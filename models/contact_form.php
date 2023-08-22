@@ -164,7 +164,4 @@
             echo "<span style='color: red; font-weight: bold;'>Por favor insira o valor correto da soma e tente novamente!</span>";
         }
     }
-
-    // Closing the database connection:
-    mysqli_close($conn);
 ?>
