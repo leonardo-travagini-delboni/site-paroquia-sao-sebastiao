@@ -102,6 +102,8 @@
             // Connecting to the database:
             include("config/conn_db.php");
 
+            echo "<br>STEP 1";                                                              //  EXCLUDE LINE
+
             // Checking if the e-mail is already applied:
             $query_check_newsletter = "SELECT * FROM newsletter WHERE email = ?";
             $stmt = mysqli_prepare($conn, $query_check_newsletter);
@@ -109,10 +111,14 @@
             mysqli_stmt_execute($stmt);
             $result = mysqli_stmt_get_result($stmt);
 
+            echo "<br>STEP 2";                                                              //  EXCLUDE LINE
+
             // In case of duplicates:
             if (mysqli_num_rows($result) > 0) {
                 return "<span style='color: red; font-weight: bold;'>E-mail já cadastrado na base.</span>";
             }
+
+            echo "<br>STEP 3";                                                              //  EXCLUDE LINE
 
             // Adding new e-mail:
             $query_new_row_newsletter = "INSERT INTO newsletter (email) VALUES (?)";
@@ -120,8 +126,12 @@
             mysqli_stmt_bind_param($stmt, 's', $new_email);
             $success = mysqli_stmt_execute($stmt);
 
+            echo "<br>STEP 4";                                                              //  EXCLUDE LINE
+
             // Closing connection with the database:
             mysqli_close($conn);
+
+            echo "<br>STEP 5";                                                              //  EXCLUDE LINE
 
             // Final message to the user:
             if ($success) {
