@@ -15,7 +15,8 @@
     include("models/churches.php");
 
     // Including the associations:
-    include("models/associations.php");
+    include("models/pastorals.php");
+
 ?>
 
 <!DOCTYPE html>
@@ -25,6 +26,7 @@
 <body>
 
     <!-- Projects Start -->
+    <!--
     <div class="container-xxl py-5">
         <div class="container">
             <div class="section-title text-center">
@@ -133,10 +135,12 @@
             </div>
         </div>
     </div>
+     -->
     <!-- Projects End -->
 
 
     <!-- Quote Start -->
+    <!--
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
         <div class="container quote px-lg-0">
             <div class="row g-0 mx-lg-0">
@@ -183,10 +187,12 @@
             </div>
         </div>
     </div>
+    -->
     <!-- Quote End -->
 
 
     <!-- Team Start -->
+    <!--
     <div class="container-xxl py-5">
         <div class="container">
             <div class="section-title text-center">
@@ -260,16 +266,18 @@
             </div>
         </div>
     </div>
+    -->
     <!-- Team End -->    
 </body>
 </html>
 
 <?php
+    // Including the donation form php:
+    include("models/donation.php");
+
     // Including the contact form php:
     include("models/contact_form.php");
-?>
 
-<?php
     // Including the footer:
     include("models/footer.php");
 ?>

@@ -8,7 +8,7 @@
     <div class="container-xxl py-5 wow fadeInUp" data-wow-delay="1.0s">
         <div class="container">
             <div class="section-title text-center">
-                <h1 class="display-5 mb-5">IGREJAS E CAPELAS</h1>
+                <h1 class="display-5 mb-5">Igrejas</h1>
             </div>
             <div class="owl-carousel testimonial-carousel">
 
