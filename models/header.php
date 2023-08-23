@@ -61,10 +61,12 @@
                 </div>
             </div>
             <div class="col-lg-5 px-5 text-end">
+                <!--
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
                     <small>(17) 3543-1654</small>
                 </div>
+                -->
                 <div class="h-100 d-inline-flex align-items-center py-3 me-4">
                     <small class="fa fa-phone-alt text-primary me-2"></small>
                     <small>(17) 99747-9104</small>
@@ -74,6 +76,7 @@
                     <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.facebook.com/saosebastiao.matriz" target="_blank"><i class="fab fa-facebook-f"></i></a>
                     <a class="btn btn-sm-square bg-white text-primary me-1" href="https://www.instagram.com/sao.sebastiao.paroquia/" target="_blank"><i class="fab fa-instagram"></i></a>
                     <a class="btn btn-sm-square bg-white text-primary me-1 d-none d-md-inline-block" href="https://www.youtube.com/channel/UCCdnVASNbY3O1Femu7BS-TQ" target="_blank"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-sm-square bg-white text-primary me-1" href="mailto:contato@saosebastiaoparoquia.com.br" target="_blank"><i class="fa fa-envelope"></i></a>
                 </div>
             </div>
         </div>
@@ -96,8 +99,9 @@
                 <div class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown">OUTROS</a>
                     <div class="dropdown-menu fade-up m-0">
-                        <a href="igrejas.php" class="dropdown-item">Igrejas</a>
-                        <a href="pastorais.php" class="dropdown-item">Pastorais</a>
+                        <a href="comunidade.php" class="dropdown-item">COMUNIDADE</a>
+                        <a href="pastorais.php" class="dropdown-item">PASTORAIS</a>
+                        <a href="padres.php" class="dropdown-item">PADRES</a>
                     </div>
                 </div>
                 <a href="contato.php" class="nav-item nav-link">CONTATO</a>

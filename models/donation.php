@@ -21,7 +21,7 @@
                             <hr>
                             <strong>ATENÇÃO! Cheque os dados do recebedor antes de enviar o PIX! </strong>
                             <br>
-                            <span style="color: red;">Websites estão sujeitos a hackers. <br>Confira os dados do recebedor antes de confirmar o envio!<br>Em caso de dúvida entre em contato direto conosco!</span>
+                            <strong><span style="color: red;">Websites estão sujeitos a hackers. <br>Confira os dados do recebedor antes de confirmar o envio!<br>Em caso de dúvida entre em contato direto conosco!</span></strong>
                         </p>
                     </div>
                 </div>

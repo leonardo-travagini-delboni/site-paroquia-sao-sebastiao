@@ -18,6 +18,7 @@
                         <a class="btn btn-outline-light btn-social" href="https://www.facebook.com/saosebastiao.matriz" target="_blank"><i class="fab fa-facebook-f"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/sao.sebastiao.paroquia/"><i class="fab fa-instagram"></i></a>
                         <a class="btn btn-outline-light btn-social" href="https://www.youtube.com/channel/UCCdnVASNbY3O1Femu7BS-TQ"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="mailto:contato@saosebastiaoparoquia.com.br"><i class="fa fa-envelope"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -25,7 +26,7 @@
                     <a class="btn btn-link" href="index.php">Início</a>
                     <a class="btn btn-link" href="sobre.php">Sobre</a>
                     <a class="btn btn-link" href="horarios.php">Horários</a>
-                    <a class="btn btn-link" href="igrejas.php">Igrejas</a>
+                    <a class="btn btn-link" href="comunidade.php">Comunidade</a>
                     <a class="btn btn-link" href="pastorais.php">Pastorais</a>
                     <a class="btn btn-link" href="contato.php">Contato</a>
                 </div>
