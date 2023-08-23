@@ -14,7 +14,7 @@
                 <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">SEJA UM DOADOR</h1>
+                            <h1 class="display-5 mb-4">SEJA DOADOR</h1>
                         </div>
                         <p class="mb-4 pb-2">
                             Vamos juntos pescar almas! Contribua com qualquer valor!<br><br>Recebedor: <strong>PAROQUIA DE SAO SEBASTIAO</strong><br>Chave PIX: <strong>03.707.358/0033-24 (CNPJ)</strong><br>Banco: <strong>CAIXA ECONOMICA FEDERAL</strong><br>

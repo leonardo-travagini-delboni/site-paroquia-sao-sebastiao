@@ -11,7 +11,7 @@
                 <div class="col-lg-6 contact-text py-5 wow fadeIn" data-wow-delay="0.5s">
                     <div class="p-lg-5 ps-lg-0">
                         <div class="section-title text-start">
-                            <h1 class="display-5 mb-4">Fale Conosco</h1>
+                            <h1 class="display-5 mb-4">FALE CONOSCO</h1>
                         </div>
                         <p class="mb-4">Envie abaixo sua mensagem.</p>
                         <form action="<?php htmlspecialchars($_SERVER["PHP_SELF"])?>" method="post">
