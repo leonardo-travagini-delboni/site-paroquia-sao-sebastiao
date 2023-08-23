@@ -14,6 +14,9 @@
     // Including the churches:
     include("models/churches.php");
 
+    // Including the donation form php:
+    include("models/priests.php");
+
     // Including the associations:
     include("models/pastorals.php");
 
@@ -194,9 +197,6 @@
 </html>
 
 <?php
-    // Including the donation form php:
-    include("models/priests.php");
-
     // Including the donation form php:
     include("models/donation.php");
 

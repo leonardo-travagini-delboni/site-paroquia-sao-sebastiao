@@ -23,8 +23,8 @@
                             -->
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h4 class="mb-0">Padre Carlos</h4>
-                            <small>(Carlos Umberto Franquin)</small>
+                            <h5 class="mb-0">Pe. Carlos Umberto Franquin</h5>
+                            <small>(2008 - 2010)</small>
                         </div>
                     </div>
                 </div>
@@ -41,8 +41,8 @@
                             -->
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h4 class="mb-0">Padre Eduardo</h4>
-                            <small>(Carlos Eduardo Cristófaro)</small>
+                            <h5 class="mb-0">Pe. Carlos Eduardo Cristófaro</h5>
+                            <small>(2010 - 2021)</small>
                         </div>
                     </div>
                 </div>
@@ -59,8 +59,8 @@
                             -->
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h4 class="mb-0">Padre Raphael</h4>
-                            <small>(Raphael Marchi Farias)</small>
+                            <h5 class="mb-0">Pe. Raphael Marchi Farias</h5>
+                            <small>(2021 - 2023)</small>
                         </div>
                     </div>
                 </div>
@@ -77,8 +77,8 @@
                             -->
                         </div>
                         <div class="text-center border border-5 border-light border-top-0 p-4">
-                            <h5 class="mb-0">Padre Eugênio</h5>
-                            <small>(Eugênio Pessato)</small>
+                            <h5 class="mb-0">Padre Eugênio Pessato</h5>
+                            <small>(2023 - atualmente)</small>
                         </div>
                     </div>
                 </div>

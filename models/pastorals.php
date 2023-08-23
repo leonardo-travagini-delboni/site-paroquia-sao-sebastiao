@@ -67,7 +67,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Catequese 1º Eucaristia</h4>
                             <p>Preparação amorosa para o sacramento da Comunhão.</p>
-                            <a class="fw-medium" href="https://api.whatsapp.com/send/?phone=5517996039379" target="_blank">(17) 99603-9379 (Lucimara)<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="https://api.whatsapp.com/send/?phone=5517997685957" target="_blank">(17) 99768-5957 (Vanessa Cosmo)<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                         <div class="p-4 text-center border border-5 border-light border-top-0">
                             <h4 class="mb-3">Pastoral dos Acólitos</h4>
                             <p>Auxliando o altar em honra a Deus durante a Santa Missa.</p>
-                            <a class="fw-medium" href="https://api.whatsapp.com/send/?phone=5517996690205" target="_blank">(17) 99669-0205 (Higor Purcineli)<i class="fa fa-arrow-right ms-2"></i></a>
+                            <a class="fw-medium" href="https://api.whatsapp.com/send/?phone=5517991004069" target="_blank">(17) 99100-4069 (Rafael Gotardo)<i class="fa fa-arrow-right ms-2"></i></a>
                         </div>
                     </div>
                 </div>

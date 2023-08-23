@@ -53,6 +53,7 @@
     <!-- About the Church End -->    
 
     <!-- About the Priest Start -->
+    <!-- -->
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
         <div class="container about px-lg-0">
             <div class="row g-0 mx-lg-0">
@@ -72,6 +73,7 @@
             </div>
         </div>
     </div>
+    <!-- -->
     <!-- About the Priest End -->
 
 </body>
